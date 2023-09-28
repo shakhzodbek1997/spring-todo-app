@@ -3,6 +3,6 @@
         <title>LOGIN page</title>
     </head>
     <body>
-        Login page Body!
+        Welcome to LOGIN page ${name}
     </body>
 </html>
