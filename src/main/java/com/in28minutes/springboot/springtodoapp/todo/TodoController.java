@@ -3,7 +3,6 @@ package com.in28minutes.springboot.springtodoapp.todo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import java.util.List;
@@ -22,7 +21,7 @@ public class TodoController {
     @RequestMapping("list-todos")
     public String listAllTodos(ModelMap model){
         List<Todo> todos = todoService.findByUsername("in28minutes");
-        model.addAttribute("toDos", todos);
+        model.addAttribute("todos", todos);
         return "listTodos";
     }
 }
