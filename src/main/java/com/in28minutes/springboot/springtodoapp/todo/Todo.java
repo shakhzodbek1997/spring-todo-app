@@ -1,12 +1,18 @@
 package com.in28minutes.springboot.springtodoapp.todo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
 
+@Entity
 public class Todo {
+    @Id
+    @GeneratedValue
     private int id;
-    private String userName;
+    private String username;
 
     @Size(min=10, message = "Enter at least 10 characters")
     private String description;
@@ -16,7 +22,7 @@ public class Todo {
     // constructor
     public Todo(int id, String userName, String description, LocalDate targetDate, boolean done) {
         this.id = id;
-        this.userName = userName;
+        this.username = userName;
         this.description = description;
         this.targetDate = targetDate;
         this.done = done;
@@ -30,12 +36,12 @@ public class Todo {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getDescription() {
@@ -67,7 +73,7 @@ public class Todo {
     public String toString() {
         return "Todo{" +
                 "id=" + id +
-                ", userName='" + userName + '\'' +
+                ", userName='" + username + '\'' +
                 ", description='" + description + '\'' +
                 ", targetDate=" + targetDate +
                 ", done=" + done +
