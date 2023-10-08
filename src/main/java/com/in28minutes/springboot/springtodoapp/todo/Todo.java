@@ -20,9 +20,12 @@ public class Todo {
     private boolean done;
 
     // constructor
-    public Todo(int id, String userName, String description, LocalDate targetDate, boolean done) {
+    public Todo(){
+
+    }
+    public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
         this.id = id;
-        this.username = userName;
+        this.username = username;
         this.description = description;
         this.targetDate = targetDate;
         this.done = done;

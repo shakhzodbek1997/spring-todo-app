@@ -1,11 +1,7 @@
 package com.in28minutes.springboot.springtodoapp.security;
 
-import java.security.PublicKey;
-import java.security.Security;
 import java.util.function.Function;
-import static org.springframework.security.config.Customizer.withDefaults;
 
-import jakarta.servlet.http.PushBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
